@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="about-section m-5">
+  <h1>About Us Page</h1>
+  <p>
+    Welcome to InkWeaveEditor, your trusted partner in the digital world. With a passion for innovation and a dedication to excellence, we specialize in providing cutting-edge IT solutions that drive business growth. Our team of skilled professionals is committed to delivering tailor-made strategies, robust software development, and top-notch technical support.</p>
+    <p>Join us on the journey to harness the power of technology and transform your ideas into reality.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+  </div>
+
+  <div class="column">
+    <div class="card text-center">
+      <img src="{% static 'photo.jpg' %}" class="m-lg-5" alt="Mike" style="width:75%;">
+      <div class="container">
+        <h2>kanak prajapati</h2>
+        <p class="title">co-founder</p>
+        <p>"Visionary co-founder driving tech innovation at InkWeaveEditor for a brighter digital future."</p>
+        <p>InkWeaveEditor24@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+    <div class="column">
+    </div>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

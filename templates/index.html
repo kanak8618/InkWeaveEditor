@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+  
+    <div>
+        <marquee  width="97%" direction="left" height="20px">
+            <code><samp>WelCome to the InkWeaveEditor Newsletter : this feature is under development</samp></code>
+        </marquee>
+    </div>
+    
+    <div class="container">
+       <h1 class="text-info text-center mb-3">Welcome to the InkWeaveEditor</h1>
+       <form action="analyze/" method="post">
+            {% csrf_token %}
+            <textarea class="form-control d-grid gap-2 col-1 mx-auto mb-2" name="text" placeholder="Enter your text here" id="floatingTextarea2" style="height: 250px; width: 70%;"></textarea>            
+            <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="removepunc">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Removepunctiation</label>
+            </div>
+            <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault1" name="newlineremover">
+                <label class="form-check-label" for="flexSwitchCheckDefault">New Line Remover</label>
+            </div>
+            <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2" name="uppercase">
+                <label class="form-check-label" for="flexSwitchCheckDefault">UpperCase</label>
+            </div>
+            <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3" name="extraspaceremover">
+                <label class="form-check-label" for="flexSwitchCheckDefault">ExtraSpaceRemover</label>
+            </div>
+            <hr>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <button class="btn btn-primary" type="submit">Analyze Text</button>
+            </div>
+        </form>
+    </div>
+
+    {% endblock %}
